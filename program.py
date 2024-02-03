@@ -15,8 +15,8 @@ def home():
        sentiment = TextBlob(text).sentiment
 
        return render_template("index.html", data = {"textInput" : text,
-                                                    "pol" : sentiment.polarity,
-                                                    "subj" : sentiment.subjectivity,})
+                                                    "pol" : round(sentiment.polarity, 3),
+                                                    "subj" : round(sentiment.subjectivity, 3),})
     
     return render_template("index.html", data = {"textInput" : ""})
 

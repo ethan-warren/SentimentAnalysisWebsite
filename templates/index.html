@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" type="text/css" 
+    href="{{ url_for('static', filename='css/style.css') }}"> 
     <title>Index</title>
 </head>
+
 <body>
-    <h1>
-        Welcome
-    </h1>
-    <form method="post">
-      Text to review: <input name="textbox"/>
-      <br/><br/>
-      <button type="submit">Submit</button>
-    </form>
+    <nav>
+        <h1>
+            Welcome
+        </h1>
+    </nav>
+    <div>
+        <form method="post" autocomplete="off">
+            Text to review: <input name="textbox" autocomplete="off">
+            <br/><br/>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
     {% if data.textInput != "" %}
-        <h3>analysis of text: {{ data.textInput }}</h3>
-        <ol>
-            <li>Polarity: {{ data.pol }}</li>
-            <li>Subjectivity: {{ data.subj }}</li>
-        </ol> 
+        <div>
+            <h3>analysis of text: {{ data.textInput }}</h3>
+            <br/>
+            <p>Polarity: {{ data.pol }}<p>
+            <p>Subjectivity: {{ data.subj }}</p>
+        </div>
+
     {% endif %}
     
 </body>
