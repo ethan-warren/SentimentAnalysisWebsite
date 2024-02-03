@@ -4,10 +4,22 @@
     <title>Index</title>
 </head>
 <body>
-    <form action="{{ url_for("gfg")}}" method="post">
-
-        <label for="firstname">Comment text:</label>
-        <input type="text" id="commentText" name="fname" placeholder="text">
-        <label for="lastname">You typed: </label>
+    <h1>
+        Welcome
+    </h1>
+    <form method="post">
+      Text to review: <input name="textbox"/>
+      <br/><br/>
+      <button type="submit">Submit</button>
+    </form>
+    {% if data.textInput != "" %}
+        <h3>analysis of text: {{ data.textInput }}</h3>
+        <ol>
+            <li>Polarity: {{ data.pol }}</li>
+            <li>Subjectivity: {{ data.subj }}</li>
+        </ol> 
+    {% endif %}
+    
 </body>
 </html>
+
