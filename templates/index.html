@@ -4,15 +4,10 @@
     <title>Index</title>
 </head>
 <body>
-    <ul id="navigation">
-    {% for item in navigation %}
-        <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
-    {% endfor %}
-    </ul>
+    <form action="{{ url_for("gfg")}}" method="post">
 
-    <h1>Index</h1>
-    {{ a_variable }}
-
-    {# a comment #}
+        <label for="firstname">Comment text:</label>
+        <input type="text" id="commentText" name="fname" placeholder="text">
+        <label for="lastname">You typed: </label>
 </body>
 </html>
