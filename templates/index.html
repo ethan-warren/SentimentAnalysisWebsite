@@ -6,30 +6,62 @@
     href="{{ url_for('static', filename='css/style.css') }}"> 
     <title>Index</title>
 </head>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
-    <nav>
-        <h1>
-            Welcome
+    <div class="topbar">
+        <h1 class="titleheading">
+            Sentiment Analysis Prototype
         </h1>
-    </nav>
-    <div>
-        <form method="post" autocomplete="off">
-            Text to review: <input name="textbox" autocomplete="off">
-            <br/><br/>
-            <button type="submit">Submit</button>
-        </form>
     </div>
-    {% if data.textInput != "" %}
-        <div>
-            <h3>analysis of text: {{ data.textInput }}</h3>
-            <br/>
-            <p>Polarity: {{ data.pol }}<p>
-            <p>Subjectivity: {{ data.subj }}</p>
-        </div>
 
-    {% endif %}
-    
+    <nav id = "navBar">
+        <div></div>
+        <div class="navItem"><p>home</p></div>
+        <div class="navItem"><p>try it</p></div>
+        <div class="navItem"><p>about</p></div>
+        <div></div>
+    </nav>
+    <section class="hero" id="hero">
+    <div class="hero-container content">
+        <div class="column-left content">
+            <img class="hero-image" src="{{ url_for('static', filename='css/indexPageImg.PNG') }}" alt="holding hands">
+        </div>
+        <div class = "column-right content">
+            <div class="hero-heading-container">
+                <h1 class="hero-heading">QUICK. ACCURATE. SAFE.</h1>
+            </div>
+            <div class="hero-bodyText-container">
+                <p class="hero-bodyText"> Our team understands parents and guardians are worried about
+                    the safety of their children on online platforms. We offer a 
+                    sentiment analysis-based extension to filter content based on 
+                    parent-set preferences. For now, our extension only works on 
+                    Instagram comments, however, as our extension develops we 
+                    hope to offer protection across platforms and a variety of content.
+                    We understand the importance of online safety coupled with 
+                    responsible use, and <b>WE AIM TO PROTECT YOU.</b></p>
+            </div>
+            <a href="/try-it" class="try-it-link">Try It Now!</a>
+
+        </div>
+    </div>
+    <div class="hero-container2">
+        <div class="hero-heading-container">
+            <h1 class="hero-heading hero-2-text">OUR BEGINNING</h1>
+        </div>
+        <div class="hero-bodyText-container">
+            <p class="hero-bodyText hero-2-text"> As a budding researcher, a member of our team submitted a AP
+                research paper with amateur components of sentiment analysis
+                last year, and received a five. This year, another member of our
+                team is researching (ETHAN WHAT R U RESEARCHING). PUT OUR
+                ACTUAL BEGINNINGS HERE. check to see if they allow project
+                submissions from other projects so we can include info</p>
+        </div>
+    </div>
+
+    </section>
+
+<script src="{{ url_for('static', filename='js/stickyNavBar.js') }}">
+</script>
 </body>
 </html>
 

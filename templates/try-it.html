@@ -1,0 +1,14 @@
+<form method="post" autocomplete="off">
+    Text to review: <input name="textbox" autocomplete="off">
+    <br/>
+    <button type="submit">Submit</button>
+</form>
+
+{% if data.textInput != "" %}
+<div class = "analysis , column-left">
+    <h3>analysis of text: {{ data.textInput }}</h3>
+    <p>Polarity: {{ data.pol }}<p>
+    <p>Subjectivity: {{ data.subj }}</p>
+    <p>Categories: {{ data.cats }}</p>
+</div>
+{% endif %}
