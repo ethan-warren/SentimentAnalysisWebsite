@@ -4,7 +4,7 @@
 <head>
     <link rel="stylesheet" type="text/css" 
     href="{{ url_for('static', filename='css/style.css') }}"> 
-    <title>Index</title>
+    <title>Home</title>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
@@ -15,11 +15,12 @@
     </div>
 
     <nav id = "navBar">
-        <div></div>
-        <div class="navItem"><p>home</p></div>
-        <div class="navItem"><p>try it</p></div>
-        <div class="navItem"><p>about</p></div>
-        <div></div>
+        <p></p>
+        <p></p>
+        <div class="navItem"><p><b>home</b></p></div>
+        <div class="navItem"><a href="/try-it">try-it</a></div>
+        <p></p>
+        <p></p>
     </nav>
     <section class="hero" id="hero">
     <div class="hero-container content">
@@ -32,11 +33,10 @@
             </div>
             <div class="hero-bodyText-container">
                 <p class="hero-bodyText"> Our team understands parents and guardians are worried about
-                    the safety of their children on online platforms. We offer a 
+                    the safety of their children on online platforms. This is a prototype for a proposed 
                     sentiment analysis-based extension to filter content based on 
-                    parent-set preferences. For now, our extension only works on 
-                    Instagram comments, however, as our extension develops we 
-                    hope to offer protection across platforms and a variety of content.
+                    parent-set preferences. This prototype demonstrates how sentiment analysis can be used
+                    to filter social-media comments.
                     We understand the importance of online safety coupled with 
                     responsible use, and <b>WE AIM TO PROTECT YOU.</b></p>
             </div>
@@ -52,10 +52,27 @@
             <p class="hero-bodyText hero-2-text"> As a budding researcher, a member of our team submitted a AP
                 research paper with amateur components of sentiment analysis
                 last year, and received a five. This year, another member of our
-                team is researching (ETHAN WHAT R U RESEARCHING). PUT OUR
-                ACTUAL BEGINNINGS HERE. check to see if they allow project
-                submissions from other projects so we can include info</p>
+                team is researching machine learning. We worked together to propose an automated
+                sentiment analysis filtering concept. This prototype analyses individual comments,
+                allowing anyone to see the behind-the-scenes of factors that impact wether a comment
+                is censored.
+              </p>
         </div>
+        <div class="hero-heading-container">
+            <h1 class="hero-heading hero-2-text">HOW IT WORKS</h1>
+        </div>
+        <div class="hero-bodyText-container">
+            <p class="hero-bodyText hero-2-text">The prototype takes text input, and
+                utilizes the power of OpenAI's GPT-3.5 Large Language Model with an API key.
+                Through this API, a prompt asks the LLM to classify text into the flagged categories: RACIST, HOMOPHOBIC, 
+                INSULT, MISOGYNISTIC, INNAPROPRIATE, LUSTFULL, DEPRESSING, SUICIDAL, MORBID, ILLEGAL, PEDOPHILIC, 
+                DRUG-RELATED.                
+                Our simplified vetting system filters any comment who's text is classified into one of these flagged categories.
+                Also, very negative comments (with a polarity of < -.75) are censored.
+                This program takes advantage of the python libraries: Flask, spaCy, and textBlob.
+            </p>
+        </div>
+       
     </div>
 
     </section>

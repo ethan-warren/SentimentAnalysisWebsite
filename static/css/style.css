@@ -26,7 +26,7 @@ nav {
     background-color: #f8e8dd;
 
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
 }
 .navItem {
     text-align: center;
@@ -61,7 +61,7 @@ nav {
     vertical-align: middle;
 }
 .hero {
-    background-color: aquamarine;
+    background-color: #f8e8dd;
 }
 .hero-container {
     display: grid;
@@ -76,6 +76,9 @@ nav {
     justify-content: top center;
     align-items: center;
     height: 70vw;
+    background-color: #0c3239;
+}
+body {
     background-color: #0c3239;
 }
 .hero-image {
@@ -105,6 +108,14 @@ nav {
 .hero-2-text {
     color: #f8e8dd;
 }
+
+.try-it-analysis-text {
+    font-size: min(2vw, 26px);
+}
+.analysis-cats-list {
+    padding-left: 2vw;
+}
+
 .column-left {
     display: flex;
     flex-direction: column;
@@ -134,11 +145,54 @@ nav {
     color: #0c3239;
     text-align: center;
     vertical-align: middle;
-    line-height: 4vw;
+    line-height: min(8vw, 2em);
     text-decoration: none;
 
     width: 30vw;
+    max-width: 15em;
     height: 4vw;
+    max-height: 2em;
+    border-radius: 30px;
+    overflow: nowrap;
+}
+
+.inputContainer {
+    font-size: min(2vw, 20px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: top center;
+    align-items: center;
+    padding-bottom: 3vw;
+}
+.inputText {
+    width: 100%;
+    font-size: min(2vw, 20px);
+    height: 4em;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+.submitButton {
+    background-color: #e6c2bf;
+    border: none;
+    
+    display: inline-block;
+
+    font-size: min(1.9vw, 30px);
+    color: #0c3239;
+    text-align: center;
+    vertical-align: middle;
+    line-height: min(4vw, 2em);
+    text-decoration: none;
+
+    width: 30vw;
+    max-width: 15em;
+    height: 4vw;
+    max-height: 2em;
     border-radius: 30px;
     overflow: nowrap;
 }
