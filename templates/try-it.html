@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" 
     href="{{ url_for('static', filename='css/style.css') }}"> 
     <title>Try-It</title>
+    <link rel="icon" type="image/x-icon" href="./static/css/logo.png">
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
@@ -71,4 +72,6 @@
         </div>
         {%endif%}
     </section>
+<script src="{{ url_for('static', filename='js/stickyNavBar.js') }}">
+</script>
 </body>

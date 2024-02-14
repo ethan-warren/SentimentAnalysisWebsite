@@ -105,6 +105,15 @@ body {
     padding-top: 3vw;
     background-color: None;
 }
+.wide-text-container {
+    width: calc(100vw * .6);
+    height: 22vw;
+    padding-top: 3vw;
+    background-color: None;
+}
+.bottomPad {
+    padding-bottom: 30vw;
+}
 .hero-2-text {
     color: #f8e8dd;
 }
@@ -188,6 +197,7 @@ body {
     vertical-align: middle;
     line-height: min(4vw, 2em);
     text-decoration: none;
+    cursor: pointer;
 
     width: 30vw;
     max-width: 15em;
