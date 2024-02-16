@@ -15,8 +15,6 @@ spacy_llm.logger.setLevel(logging.NOTSET)
 Arg = typer.Argument
 Opt = typer.Option
 
-os.environ["OPENAI_API_KEY"] = "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"
-
 def run_pipeline(
     # fmt: off
     text: str = Arg("", help="Text to perform text categorization on."),
