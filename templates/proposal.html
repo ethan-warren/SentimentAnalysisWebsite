@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" 
+    href="{{ url_for('static', filename='css/style.css') }}"> 
+    <title>Proposal</title>
+    <link rel="icon" type="image/x-icon" href="./static/css/logo.png">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+    <div class="topbar">
+        <h1 class="titleheading">Sentiment Analysis Prototype</h1>
+    </div>
+    <nav id = "navBar">
+        <p></p>
+        <div class="navItem"><a href="/">home</a></div>
+        <div class="navItem"><a href="/prototype">prototype</a></div>
+        <div class="navItem"><p><b>proposal</b></p></div>
+
+        <p></p>
+    </nav>
+    <section class="hero" id="hero">
+        <div class="hero-container4">
+            <div class="wide-text-container">
+                <p class="hero-bodyText">
+                    Our prototype is different from our proposal, but it serves as a great launching point and proof of concept.
+                    Here is more information to show the scope and functionality of our proposed sentiment analysis extension.
+                </p>
+            </div>
+        </div>
+        <div class="column-right">
+            <img class="proposal-Image" src="{{ url_for('static', filename='css/proposalPageDesignChart.PNG') }}" alt="design diagram">
+        </div>
+
+</body>
+</html>

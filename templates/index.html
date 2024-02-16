@@ -17,10 +17,9 @@
 
     <nav id = "navBar">
         <p></p>
-        <p></p>
         <div class="navItem"><p><b>home</b></p></div>
-        <div class="navItem"><a href="/try-it">try-it</a></div>
-        <p></p>
+        <div class="navItem"><a href="/prototype">prototype</a></div>
+        <div class="navItem"><a href="/proposal">proposal</a></div>
         <p></p>
     </nav>
     <section class="hero" id="hero">
@@ -41,16 +40,16 @@
                     We understand the importance of online safety coupled with 
                     responsible use, and <b>WE AIM TO PROTECT YOU.</b></p>
             </div>
-            <a href="/try-it" class="try-it-link">Try It Now!</a>
+            <a href="/prototype" class="try-it-link">Try It Now!</a>
 
         </div>
     </div>
-    <div class="hero-container2">
+    <div class="hero-container2 invertedColors">
         <div class="hero-heading-container">
-            <h1 class="hero-heading hero-2-text">OUR BEGINNING</h1>
+            <h1 class="hero-heading invertedColors">OUR BEGINNING</h1>
         </div>
         <div class="wide-text-container">
-            <p class="hero-bodyText hero-2-text"> As a budding researcher, a member of our team submitted a AP
+            <p class="hero-bodyText invertedColors"> As a budding researcher, a member of our team submitted a AP
                 research paper with amateur components of sentiment analysis
                 last year, and received a five. This year, another member of our
                 team is researching machine learning. We worked together to propose an automated
@@ -59,25 +58,50 @@
                 is censored.
               </p>
         </div>
+    </div>
+    <div class="hero-container2 secondaryColors extraLongContainer">
         <div class="hero-heading-container">
-            <h1 class="hero-heading hero-2-text">HOW IT WORKS</h1>
+            <h1 class="hero-heading">HOW IT WORKS</h1>
+        </div>
+        <div class="split-container">
+            <div class="column-right">
+                <div class="split-text-container">
+                    <p class="hero-bodyText">The prototype takes text input, and
+                        utilizes the power of OpenAI's GPT-3.5 Large Language Model with an API key.
+                        Through this API, a prompt asks the LLM to classify text into our flagged categories (see list on right). <br><br>
+                        Our simplified vetting system filters any comment who's text is classified into one of these flagged categories.
+                        Also, very negative comments (with a polarity of < -.75) are censored.
+                        This program takes advantage of the python libraries: Flask, spaCy, and textBlob.
+                    </p>
+                </div>
+            </div>
+            <div class="column-right">
+                <div class="list-container">
+                    <p class="listElement">RACIST</p>
+                    <p class="listElement">HOMOPHOBIC</p>
+                    <p class="listElement">INSULT</p>
+                    <p class="listElement">MISOGYNISTIC</p>
+                    <p class="listElement">INNAPROPRIATE</p>
+                    <p class="listElement">LUSTFULL</p>
+                    <p class="listElement">DEPRESSING</p>
+                    <p class="listElement">SUICIDAL</p>
+                    <p class="listElement">MORBID</p>
+                    <p class="listElement">ILLEGAL</p>
+                    <p class="listElement">PEDOPHILIC</p>
+                    <p class="listElement">DRUG-RELATED</p>
+                </div>
+            </div>
+
+        </div>
+        
+        
+    </div>
+    <div class="hero-container2 tertiaryColors extraLongContainer">
+        <div class="hero-heading-container">
+            <h1 class="hero-heading">IMPLICATIONS</h1>
         </div>
         <div class="wide-text-container">
-            <p class="hero-bodyText hero-2-text">The prototype takes text input, and
-                utilizes the power of OpenAI's GPT-3.5 Large Language Model with an API key.
-                Through this API, a prompt asks the LLM to classify text into the flagged categories: RACIST, HOMOPHOBIC, 
-                INSULT, MISOGYNISTIC, INNAPROPRIATE, LUSTFULL, DEPRESSING, SUICIDAL, MORBID, ILLEGAL, PEDOPHILIC, 
-                DRUG-RELATED. <br>
-                Our simplified vetting system filters any comment who's text is classified into one of these flagged categories.
-                Also, very negative comments (with a polarity of < -.75) are censored.
-                This program takes advantage of the python libraries: Flask, spaCy, and textBlob.
-            </p>
-        </div>
-        <div class="hero-heading-container">
-            <h1 class="hero-heading hero-2-text">WHAT THIS MEANS</h1>
-        </div>
-        <div class="wide-text-container bottomPad">
-            <p class="hero-bodyText hero-2-text">This website demonstrates the feasibility of
+            <p class="hero-bodyText">This website demonstrates the feasibility of
                 an accessible social media filtering service. Media censorship is often a controversial
                 subject, but when it comes to minors being exposed to senseless amounts of hate, sexualization,
                 and bullying online, we believe censorhip is a necessity.

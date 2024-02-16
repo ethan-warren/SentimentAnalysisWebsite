@@ -16,5 +16,5 @@ function myFunction() {
 window.addEventListener('resize', setSticky);
 function setSticky() {
     /*sticky = navbar.getBoundingClientRect().top;
-    myFunction(); */
+    myFunction();*/
 }

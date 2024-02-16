@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" 
+    href="{{ url_for('static', filename='css/style.css') }}"> 
+    <title>Prototype</title>
+    <link rel="icon" type="image/x-icon" href="./static/css/logo.png">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+    <div class="topbar">
+        <h1 class="titleheading">Sentiment Analysis Prototype</h1>
+    </div>
+    <nav id = "navBar">
+        <p></p>
+        <div class="navItem"><a href="/">home</a></div>
+        <div class="navItem"><p><b>prototype</b></p></div>
+        <div class="navItem"><a href="/proposal">proposal</a></div>
+        <p></p>
+    </nav>
+    <section class="hero" id="hero">
+        <div class="hero-container2 secondaryColors shortContainer">
+            <div class="hero-heading-container">
+                <h1 class="hero-heading">Enter text to review</h1>
+            </div>
+            <form class = "inputContainer" method="post" autocomplete="off">
+                <textarea name="textbox" class="inputText" cols="50" > </textarea>
+                <button class="submitButton" type="submit">Analyze</button>
+        </div>
+        {% if data.textInput != "" %}
+        <div class="hero-container2 tertiaryColors extraLongContainer">
+            <div class="hero-heading-container">
+                <h1 class="hero-heading">Analysis</h1>
+            </div>
+            <div class="analysis-split-container">
+                <div>
+                    <p class="hero-bodyText try-it-analysis-text"><u><b>Text Entered</b></u>: {{data.textInput }}</p>
+                    <br>
+                    <br>
+                    <p class="hero-bodyText try-it-analysis-text"><u><b>Censored</b></u>: {{data.filter}}</p>
+                    <br>
+                    <br>
+                    <p class="hero-bodyText try-it-analysis-text"><u><b>Flagged Categories:</b></u> {{data.cats}}</p>
+                </div>
+                <div>
+                    <p class="hero-bodyText try-it-analysis-text">  <u><b>Polarity</b></u>: {{ data.pol }}</p>
+                    <br>
+                    <br>
+                    <p class="hero-bodyText try-it-analysis-text">  <u><b>Subjectivity</b></u>: {{ data.subj }}</p>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="hero-container2 tertiaryColors extraLongContainer">
+            <div class="hero-heading-container">
+                <h1 class="hero-heading">Analysis</h1>
+            </div>
+            <div class="analysis-split-container">
+                <div>
+                    <p class="hero-bodyText try-it-analysis-text"><u><b>Text Entered</b></u>: </p>
+                    <br>
+                    <br>
+                    <p class="hero-bodyText try-it-analysis-text"><u><b>Censored</b></u>: </p>
+                    <br>
+                    <br>
+                    <p class="hero-bodyText try-it-analysis-text"><u><b>Flagged Categories</u></b>: </p>
+                </div>
+                <div>
+                    <p class="hero-bodyText try-it-analysis-text">  <u><b>Polarity</b></u>: </p>
+                    <br>
+                    <br>
+                    <p class="hero-bodyText try-it-analysis-text">  <u><b>Subjectivity</b></u>: </p>
+                </div>
+            </div>
+        </div>
+        {%endif%}
+    </section>
+<script src="{{ url_for('static', filename='js/stickyNavBar.js') }}">
+</script>
+</body>
