@@ -1,3 +1,5 @@
+#Note: THE MAJORITY OF THIS FILE IS A TEMPLATE PROVIDED BY DOCUMENTATION FOR THE PYTHON LIBRARY SPACY
+
 import os
 from pathlib import Path
 from typing import Optional
